@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start of your adventure wizard</title>
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <style>
+      /* This targets the container */
+      .center-box {
+        text-align: center;    /* Centers the text inside */
+        border: 5px solid purple; /* Shows you the boundaries of the box */
+        width: 70%;           /* Ensures it takes up the full width */
+        margin: 0 auto;       /* Centers the box itself on the page */
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="center-box">
+      <h1>Welcome to Peakotopia, a land perfect for a wizard (btw this a warm-up fight to train you for later)</h1>
+    </div>
+
+    <div style="text-align: center; margin-top: 30px;">
+      <button type="button" onclick="rollDice()" style="
+        padding: 20px 40px;
+        font-size: 45px;
+        font-family: 'Times New Roman', serif;
+        background-color: #F0F8FF;
+        color: #DC143C;
+        border-radius: 10px;
+        cursor: pointer;">
+        <img src="kimohc.png" alt="Chomik">
+      </button>
+    </div>
+
+    <div style="text-align: center; margin-top: 20px; font-family: sans-serif;">
+      
+      <div id="message" style="font-size: 24px; color: #555; font-weight: bold; margin-bottom: 5px;"></div>
+      <div id="result" style="font-size: 48px; font-weight: bold;"></div>
+    </div>
+
+  <script>
+      function rollDice() {
+        let randomNumber = Math.floor(Math.random() * 20) + 1;
+        let specificText = "";
+        let targetUrl = ""; // Dynamic variable to hold our next page link
+
+        // 1. Determine text and destination based on roll
+        if (randomNumber >= 1 && randomNumber <= 7) {
+          specificText = "How did you already lose, this enemy doesn't even attack"; 
+          targetUrl = "lose_page.html";
+         
+        } else if (randomNumber >= 8 && randomNumber <= 10) {
+          if (Math.random() < 0.5) {
+            targetUrl = "lose_page.html";
+          } else {
+               targetUrl = "wizard_adventurestart.html";
+         
+          }
+
+        } else if (randomNumber >= 11 && randomNumber <= 20) {
+          targetUrl = "wizard_adventurestart.html";
+        }
+
+        // 2. Immediately update the text on screen so the player sees it
+        document.getElementById("message").innerText = specificText;
+        document.getElementById("result").innerText = "You rolled a: " + randomNumber;
+
+        // 3. Wait 2000ms (2 seconds) before triggering the redirect
+        setTimeout(function() {
+          window.location.href = targetUrl;
+        }, 250); 
+      }
+    </script>
+
+  </body>
+</html>
