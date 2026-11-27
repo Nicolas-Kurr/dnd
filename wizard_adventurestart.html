@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kojavalopinaakokawa'Astriolamonakipa</title>
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    
+    <style>
+      body {
+        /* 1. Link to your saved image file */
+        background-image: url('dndthingybackground1.png');
+        
+        /* 2. Prevent the image from tiling/repeating */
+        background-repeat: no-repeat;
+        
+        /* 3. Center the image on the screen */
+        background-position: center;
+        
+        /* 4. Force the image to stretch and cover the entire background */
+        background-size: cover;
+        
+        /* 5. Keep the background fixed in place if you scroll */
+        background-attachment: fixed;
+        
+        /* Optional styling to make your page look clean */
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+      }
+
+      /* Fixed container to anchor everything to the bottom-left */
+      .bottom-left-button {
+        position: fixed;
+        bottom: 20px; /* Distance from the bottom of the screen */
+        left: 20px;   /* Distance from the left of the screen */
+        z-index: 1000; /* Ensures the button stays on top of other elements */
+      }
+      .top-right-btn {
+      position: fixed;
+      top: 15px;   /* Distance from the top edge */
+      right: 15px; /* Distance from the right edge */
+      
+      /* Optional: Making the button look nice */
+      padding: 8px 16px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    </style>
+  </head>
+  <body>
+
+    <div class="bottom-left-button">
+      <a href="wizard_adventurebar.html">
+        <button type="button" style="
+          padding: 5px 10px; 
+          font-size: 17.5px; 
+          font-family: 'Times New Roman',serif; 
+          background-color: #FFF8DC; 
+          color: #DC143C; 
+          border-radius: 0.25px;
+          cursor: pointer;">
+          <img src="bar.png" alt="Bar" style="width: 350px; height: auto;">
+        </button>
+      </a>
+    </div>
+    
+    <div class="top-right-btn">
+      <a href="inventory.html">
+        <button type="button" style="
+          padding: 5px 10px; 
+          font-size: 17.5px; 
+          font-family: 'Times New Roman',serif; 
+          background-color: #FFF8DC; 
+          color: #DC143C; 
+          border-radius: 0.25px;
+          cursor: pointer;">
+          Book of Spells
+        </button>
+      </a>
+    </div>
+
