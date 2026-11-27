@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Universe of Peakotopia</title>
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <style>
+
+  .center-box {
+    text-align: center;    
+    border: 2px solid red; 
+    width: 100%;           
+  }
+</style>
+  </head>
+  <body>
+    <div class="center-box">
+    <h1>The magical land of Peakotopia</h1>
+    </div>
+    
+    <p>A pre-scripted DnD (Not Really) styled adventure</p>
+<a href="classes.html">
+  <button type="button" style="
+    padding: 20px 40px; 
+    font-size: 60px; 
+    font-family: 'Times New Roman',serif; 
+    background-color: #F0F8FF; 
+    color: #DC143C; 
+    border-radius: 10px;
+    cursor: pointer;">
+    Choose your Class 
+  </button>
+</a>
+
+    <button type="button" onclick="rollTheDice()" style="
+      padding: 20px 40px; 
+      font-size: 45px; 
+      font-family: 'Times New Roman',serif; 
+      background-color: #F0F8FF; 
+      color: #DC143C; 
+      border-radius: 10px;
+      cursor: pointer;">
+      How to play
+    </button>
+
+    <script>
+      function rollTheDice() {
+        // Math.random() generates a decimal number between 0.0 and 1.0
+        let roll = Math.random();
+
+        if (roll < 0.99) {
+          // 70% chance (any number from 0 to 0.69)
+          window.location.href = "https://www.youtube.com/watch?v=xvFZjo5PgG0";
+        } else {
+          // 30% chance (any number from 0.70 to 1.0)
+          // REPLACE 'actual_guide_page.html' WITH YOUR REAL GAMEPLAY INSTRUCTIONS PAGE
+          window.location.href = "actual_guide_page.html"; 
+        }
+      }
+    </script>
+
+  <p>Disclaimer: This game is still in very very heavy developpement so don't expect much. Bugs will mostly occur when you play this. </p>
+
+
+    
+ 
+
+
+
+
+  </body>
+
+
+</html>
