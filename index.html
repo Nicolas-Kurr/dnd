@@ -46,15 +46,14 @@
 
     <script>
       function rollTheDice() {
-        // Math.random() generates a decimal number between 0.0 and 1.0
+       
         let roll = Math.random();
 
-        if (roll < 0.99) {
-          // 70% chance (any number from 0 to 0.69)
+        if (roll < 0.95) {
+         
           window.location.href = "https://www.youtube.com/watch?v=xvFZjo5PgG0";
         } else {
-          // 30% chance (any number from 0.70 to 1.0)
-          // REPLACE 'actual_guide_page.html' WITH YOUR REAL GAMEPLAY INSTRUCTIONS PAGE
+         
           window.location.href = "actual_guide_page.html"; 
         }
       }
